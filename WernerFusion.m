@@ -3,7 +3,7 @@ function [rho, rho_GHZ] = WernerFusion(states,fqubits)
 %% states = nested list with [#qubits,Fidelity]
 %% fqubits = qubits of each state undergoing fusion
 
-rho0 = getRho(states)
+rho0 = getRho(states);
 qubits = sum(states(:,1));
 CX = multiQubitCX(qubits,fqubits);
 H=[1/sqrt(2),1/sqrt(2);1/sqrt(2),-1/sqrt(2)];

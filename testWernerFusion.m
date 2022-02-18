@@ -1,9 +1,9 @@
 clear all
 close all
 clc
-m = 3;
+m = 4;
 F = 0.8;
-k=3;
+k=2;
 states = kron(ones(1,m)',[k,F;]);
 fqubits = 1:k:k*m
 [rho, rho_GHZ] = WernerFusion(states,fqubits);
